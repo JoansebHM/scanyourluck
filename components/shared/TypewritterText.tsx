@@ -55,7 +55,7 @@ function TypewriterTextInner({
   let wordCount = 0;
 
   return (
-    <div className="flex flex-col items-start text-6xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-semibold -tracking-wider max-w-full sm:max-w-[90%] md:max-w-[85%] lg:max-w-[80%] xl:max-w-[80%] 2xl:max-w-[80%]">
+    <div className="flex flex-col items-start text-white drop-shadow-[0_0_90px_rgba(255,255,255,0.8)] text-6xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-semibold -tracking-wider max-w-full sm:max-w-[90%] md:max-w-[85%] lg:max-w-[80%] xl:max-w-[80%] 2xl:max-w-[80%]">
       <div className="flex items-start w-full">
         <span
           className={`text-primary transition-all duration-1000 text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl 2xl:text-8xl shrink-0 mr-2 ${
@@ -127,7 +127,7 @@ function TypewriterTextInner({
               <span
                 className={`transition-all duration-500 ${
                   isRevealed
-                    ? `${isName ? "text-white/60" : "text-white/40"} opacity-100 blur-none`
+                    ? `${isName ? "" : "text-white/40 drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]"} opacity-100 blur-none`
                     : "text-primary opacity-20 blur-sm"
                 }`}
               >
