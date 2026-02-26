@@ -10,7 +10,10 @@ export function useGetMessages() {
   const [messages, setMessages] = useState<BrandType | null>(null);
 
   useEffect(() => {
-    getMessagesByBrandId(user?.id || "").then(setMessages);
+    if (!user?.id) return;
+    getMessagesByBrandId(user.id as string).then((data) =>
+      setMessages(data as BrandType),
+    );
   }, [user?.id]);
 
   return { messages, loading };
