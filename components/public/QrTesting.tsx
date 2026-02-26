@@ -33,8 +33,13 @@ export function QrTestingSection() {
     }
     setIsGenerating(true);
     setTimeout(() => {
+      const url =
+        process.env.NODE_ENV === "development"
+          ? "http://localhost:3000"
+          : "https://scanyourluck.vercel.app/";
       setGeneratedMessage(
-        "http://localhost:3000/scan/" +
+        url +
+          "/scan/" +
           encodeURIComponent(message.trim()) +
           (name.trim() ? "?sender=" + encodeURIComponent(name.trim()) : ""),
       );
